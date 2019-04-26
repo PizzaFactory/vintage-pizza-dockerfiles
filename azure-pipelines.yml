@@ -1,0 +1,53 @@
+# This file was auto-generated.
+
+trigger:
+  branches:
+   include:
+     - partial
+
+jobs:
+
+
+### recipes/pf-gnuchains4x-arm-eabi/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+  - job: "recipes__pf__gnuchains4x__arm__eabi__4__7__4__20140603__Dockerfile"
+    timeoutInMinutes: 0
+    pool:
+      vmImage: 'Ubuntu 16.04'
+    steps:
+
+    - task: Docker@1
+      displayName: 'Login to ACR.'
+      inputs:
+        command: login
+        dockerRegistryEndpoint: camino.azurecr.io
+        containerregistrytype: Container Registry
+
+    - script: |
+        set +e
+        docker pull camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603
+        if [[ $? == 0 ]]; then
+          docker tag camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603 vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603
+        else
+          docker pull vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603
+        fi
+        if [[ $? != 0 ]]; then
+          docker tag scratch vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603
+        fi
+        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        if [[ $? == 0 ]]; then
+          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+        else
+          docker pull camino.azurecr.io/eclipse/cpp_gcc
+        fi
+        if [[ $? != 0 ]]; then
+          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+        fi
+        exit 0
+      continueOnError: true
+      failOnStderr: false
+      displayName: "Pulling cache. (errors will be ignored)"
+    - script: docker build -f recipes/pf-gnuchains4x-arm-eabi/4.7.4-20140603/Dockerfile --cache-from vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603 -t camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603 recipes/pf-gnuchains4x-arm-eabi/4.7.4-20140603
+      displayName: "Building camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603"
+    - script: docker push camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603
+      displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603"
+      condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
