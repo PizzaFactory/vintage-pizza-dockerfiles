@@ -1,6 +1,6 @@
 FROM camino.azurecr.io/eclipse/cpp_gcc
 ARG RELEASE=4.7.4-20140603
-ARG TARGET=arm-pizzafactory-eabi
+ARG TARGET=powerpc-pizzafactory-elf
 ARG PREFIX=/opt/pizza
 
 USER root

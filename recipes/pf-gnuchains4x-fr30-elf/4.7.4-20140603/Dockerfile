@@ -1,6 +1,6 @@
 FROM camino.azurecr.io/eclipse/cpp_gcc
 ARG RELEASE=4.7.4-20140603
-ARG TARGET=arm-pizzafactory-eabi
+ARG TARGET=fr30-pizzafactory-elf
 ARG PREFIX=/opt/pizza
 
 USER root
@@ -44,3 +44,5 @@ USER user
 
 # Just checking.
 RUN ${PREFIX}/bin/${TARGET}-gcc --help
+
+
