@@ -1,4 +1,4 @@
-FROM camino.azurecr.io/eclipse/cpp_gcc
+FROM camino.azurecr.io/eclipse/cpp_gcc:ubuntu-xenial
 ARG RELEASE=4.7.4-20140603
 ARG TARGET=mips64-pizzafactory-elf
 ARG PREFIX=/opt/pizza
