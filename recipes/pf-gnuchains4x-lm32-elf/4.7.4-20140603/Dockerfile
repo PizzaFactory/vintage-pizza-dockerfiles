@@ -1,4 +1,4 @@
-FROM camino.azurecr.io/eclipse/cpp_gcc:ubuntu-xenial
+FROM camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
 ARG RELEASE=4.7.4-20140603
 ARG TARGET=lm32-pizzafactory-elf
 ARG PREFIX=/opt/pizza

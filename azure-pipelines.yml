@@ -8,7 +8,7 @@ trigger:
 jobs:
 
 
-### recipes/pf-gnuchains4x-powerpc-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-powerpc-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-powerpc-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-powerpc-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__powerpc__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -33,14 +33,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-powerpc-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -52,7 +52,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-powerpc-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-arm-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-arm-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-arm-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-arm-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__arm__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -77,14 +77,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-arm-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -96,7 +96,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-arm-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-microblaze-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-microblaze-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-microblaze-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-microblaze-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__microblaze__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -121,14 +121,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-microblaze-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -140,7 +140,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-microblaze-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-lm32-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-lm32-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-lm32-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-lm32-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__lm32__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -165,14 +165,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-lm32-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -184,7 +184,51 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-lm32-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-arm-eabi/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/stack-base/ubuntu-xenial/Dockerfile vintage-pizza-partial/stack-base:ubuntu-xenial depends on camino.azurecr.io/eclipse/cpp_gcc:ubuntu-xenial camino.azurecr.io/eclipse/cpp_gcc/ubuntu-xenial
+  - job: "recipes__stack__base__ubuntu__xenial__Dockerfile"
+    timeoutInMinutes: 0
+    pool:
+      vmImage: 'Ubuntu 16.04'
+    steps:
+
+    - task: Docker@1
+      displayName: 'Login to ACR.'
+      inputs:
+        command: login
+        dockerRegistryEndpoint: camino.azurecr.io
+        containerregistrytype: Container Registry
+
+    - script: |
+        set +e
+        docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
+        if [[ $? == 0 ]]; then
+          docker tag camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial vintage-pizza-partial/stack-base:ubuntu-xenial
+        else
+          docker pull vintage-pizza-partial/stack-base:ubuntu-xenial
+        fi
+        if [[ $? != 0 ]]; then
+          docker tag scratch vintage-pizza-partial/stack-base:ubuntu-xenial
+        fi
+        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc:ubuntu-xenial
+        if [[ $? == 0 ]]; then
+          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc:ubuntu-xenial camino.azurecr.io/eclipse/cpp_gcc:ubuntu-xenial
+        else
+          docker pull camino.azurecr.io/eclipse/cpp_gcc:ubuntu-xenial
+        fi
+        if [[ $? != 0 ]]; then
+          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc:ubuntu-xenial
+        fi
+        exit 0
+      continueOnError: true
+      failOnStderr: false
+      displayName: "Pulling cache. (errors will be ignored)"
+    - script: docker build -f recipes/stack-base/ubuntu-xenial/Dockerfile --cache-from vintage-pizza-partial/stack-base:ubuntu-xenial -t camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial recipes/stack-base/ubuntu-xenial
+      displayName: "Building camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial"
+    - script: docker push camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
+      displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial"
+      condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+
+### recipes/pf-gnuchains4x-arm-eabi/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__arm__eabi__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -209,14 +253,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -228,7 +272,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-arm-eabi:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-mips64-toppershrp/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-mips64-toppershrp:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-mips64-toppershrp/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-mips64-toppershrp:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__mips64__toppershrp__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -253,14 +297,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-mips64-toppershrp:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -272,7 +316,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-mips64-toppershrp:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-v850-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-v850-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-v850-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-v850-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__v850__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -297,14 +341,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-v850-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -316,7 +360,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-v850-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-nios2-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-nios2-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-nios2-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-nios2-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__nios2__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -341,14 +385,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-nios2-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -360,7 +404,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-nios2-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-xtensa-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-xtensa-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-xtensa-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-xtensa-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__xtensa__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -385,14 +429,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-xtensa-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -404,7 +448,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-xtensa-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-xstormy16-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-xstormy16-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-xstormy16-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-xstormy16-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__xstormy16__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -429,14 +473,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-xstormy16-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -448,7 +492,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-xstormy16-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-mips64-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-mips64-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-mips64-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-mips64-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__mips64__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -473,14 +517,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-mips64-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -492,7 +536,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-mips64-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-fr30-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-fr30-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-fr30-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-fr30-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__fr30__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -517,14 +561,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-fr30-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -536,7 +580,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-fr30-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-mips-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-mips-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-mips-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-mips-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__mips__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -561,14 +605,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-mips-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -580,7 +624,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-mips-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-i386-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-i386-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-i386-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-i386-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__i386__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -605,14 +649,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-i386-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -624,7 +668,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-i386-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-m32c-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-m32c-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-m32c-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-m32c-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__m32c__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -649,14 +693,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-m32c-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -668,7 +712,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-m32c-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-sh-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-sh-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-sh-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-sh-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__sh__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -693,14 +737,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-sh-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -712,7 +756,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-sh-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-avr-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-avr-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-avr-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-avr-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__avr__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -737,14 +781,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-avr-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -756,7 +800,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-avr-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-m68k-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-m68k-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-m68k-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-m68k-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__m68k__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -781,14 +825,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-m68k-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -800,7 +844,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-m68k-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-bfin-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-bfin-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-bfin-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-bfin-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__bfin__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -825,14 +869,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-bfin-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -844,7 +888,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-bfin-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-h8300-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-h8300-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-h8300-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-h8300-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__h8300__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -869,14 +913,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-h8300-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -888,7 +932,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-h8300-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-m32r-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-m32r-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-m32r-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-m32r-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__m32r__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -913,14 +957,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-m32r-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
@@ -932,7 +976,7 @@ jobs:
       displayName: "Pushing camino.azurecr.io/vintage-pizza-partial/pf-gnuchains4x-m32r-elf:4.7.4-20140603"
       condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
 
-### recipes/pf-gnuchains4x-rx-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-rx-elf:4.7.4-20140603 depends on camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+### recipes/pf-gnuchains4x-rx-elf/4.7.4-20140603/Dockerfile vintage-pizza-partial/pf-gnuchains4x-rx-elf:4.7.4-20140603 depends on camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/recipes/stack-base/ubuntu-xenial
   - job: "recipes__pf__gnuchains4x__rx__elf__4__7__4__20140603__Dockerfile"
     timeoutInMinutes: 0
     pool:
@@ -957,14 +1001,14 @@ jobs:
         if [[ $? != 0 ]]; then
           docker tag scratch vintage-pizza-partial/pf-gnuchains4x-rx-elf:4.7.4-20140603
         fi
-        docker pull camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc
+        docker pull camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         if [[ $? == 0 ]]; then
-          docker tag camino.azurecr.io/camino.azurecr.io/eclipse/cpp_gcc camino.azurecr.io/eclipse/cpp_gcc
+          docker tag camino.azurecr.io/camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         else
-          docker pull camino.azurecr.io/eclipse/cpp_gcc
+          docker pull camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         if [[ $? != 0 ]]; then
-          docker tag scratch camino.azurecr.io/eclipse/cpp_gcc
+          docker tag scratch camino.azurecr.io/vintage-pizza-partial/stack-base:ubuntu-xenial
         fi
         exit 0
       continueOnError: true
