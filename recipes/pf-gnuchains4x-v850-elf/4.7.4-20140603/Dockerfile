@@ -26,7 +26,7 @@ WORKDIR pf-binutils-gdb-${RELEASE}
 RUN patch -p1 < /opt/sources/asm-spec.patch
 RUN sh 00pizza-generate-link.sh
 WORKDIR /tmp/build
-RUN CC=gcc-4.9 CXX=g++-4.9 /tmp/sources/pf-binutils-gdb-${RELEASE}/configure --quiet --disable-werror --disable-debug --disable-dependency-tracking --disable-silent-rules --prefix=${PREFIX} --target=${TARGET} --disable-gdbtk  --disable-tui --disable-rda --enable-interwork --enable-multilib --with-newlib --without-headers --without-ppl --without-cloog --enable-languages=c,c++ --with-bugurl=http://sourceforge.jp/projects/pf3gnuchains/ticket/
+RUN CC=gcc-4.9 CXX=g++-4.9 /tmp/sources/pf-binutils-gdb-${RELEASE}/configure --quiet --disable-werror --disable-debug --disable-dependency-tracking --disable-silent-rules --prefix=${PREFIX} --target=${TARGET} --disable-gdbtk  --disable-tui --disable-rda --enable-interwork --enable-multilib --with-newlib --without-headers --without-ppl --without-cloog --enable-languages=c,c++ --with-bugurl=http://sourceforge.jp/projects/pf3gnuchains/ticket/ --enable-soft-float
 RUN make all-binutils
 RUN make all-ld
 RUN make all-gas
